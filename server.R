@@ -1,6 +1,6 @@
-# server.R
+# server.R — entry point for Posit Connect Cloud (with ui.R; no app.R)
 
-server <- function(input, output, session) {
+function(input, output, session) {
   observeEvent(input$country, {
     periods <- country_periods[[input$country]]
     if (is.null(periods) || !length(periods)) {

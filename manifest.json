@@ -2552,14 +2552,11 @@
     "afg_geo.geojson": {
       "checksum": "d6dda09b18fcc5d87d371f1a5f7a3acb"
     },
-    "app.R": {
-      "checksum": "e28507c52432a9114cfec08ad3e1090d"
-    },
     "eth_geo.geojson": {
       "checksum": "a91d84ad9f588fef83007bb2f6baf451"
     },
     "global.R": {
-      "checksum": "57cc62dd04e2f6c92c9d7c4ae2ce97b9"
+      "checksum": "2adcded70cc07fb9da25653f3faa653f"
     },
     "indicator_components.rds": {
       "checksum": "7f871aa29c87d89094e719222761b9d4"
@@ -2574,10 +2571,10 @@
       "checksum": "4930ec84eadda7b1b37a38885c4a8226"
     },
     "README.md": {
-      "checksum": "74a90f4c6cc52135f23d27c7010acd9e"
+      "checksum": "97ebede6e7d5e1af114322b93f4f4ec6"
     },
     "server.R": {
-      "checksum": "fcc4b8507ff2f7ec280b640204fa99a4"
+      "checksum": "591a61e29981d679e8e56cbca54c5d2b"
     },
     "ui.R": {
       "checksum": "cf893bb40446f15d42fcae182c138dca"

@@ -6,7 +6,7 @@ Shiny app for exploring **Proxy Severity Index (PSI)** scores and **People in Ne
 
 | File / folder | Purpose |
 |---------------|---------|
-| `app.R`, `ui.R`, `server.R`, `global.R` | Shiny application |
+| `ui.R`, `server.R`, `global.R` | Shiny application (standard layout; no `app.R`) |
 | `R/psi_helpers.R` | Severity, weight, and aggregation logic |
 | `indicator_components.rds` | Pre-processed indicator data (all countries × periods) |
 | `*_geo.geojson` | ADM2 boundaries (Ethiopia, Iran, Afghanistan) |
@@ -26,7 +26,7 @@ Rscript install_packages.R
 This is a **Shiny for R** app. Posit Connect Cloud needs [`manifest.json`](https://docs.posit.co/connect-cloud/how-to/r/dependencies.html), not `requirements.txt` ([`requirements.txt` is for Python only](https://docs.posit.co/connect-cloud/how-to/python/dependencies.html)).
 
 1. In Posit Connect Cloud, choose **Shiny for R** (not Python).
-2. Point deployment at this repo; primary file: `app.R`.
+2. Point deployment at this repo; primary file: **`server.R`** (same as [LCAT-DAH](https://github.com/asmcauliffe/LCAT-DAH)).
 3. Ensure `manifest.json` is in the repo root (regenerate locally after adding packages):
 
    ```r
@@ -42,13 +42,7 @@ This is a **Shiny for R** app. Posit Connect Cloud needs [`manifest.json`](https
 Clone the repo, set working directory to the app root (this folder), then:
 
 ```r
-shiny::runApp()
-```
-
-Or:
-
-```r
-Rscript -e "shiny::runApp(launch.browser = TRUE)"
+shiny::runApp()   # loads global.R, ui.R, and server.R from this directory
 ```
 
 Optional check before launch:

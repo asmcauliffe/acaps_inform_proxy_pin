@@ -1,4 +1,4 @@
-# global.R — loaded by app.R before ui.R and server.R
+# global.R — auto-loaded by Shiny before ui.R and server.R
 
 suppressPackageStartupMessages({
   library(shiny)
