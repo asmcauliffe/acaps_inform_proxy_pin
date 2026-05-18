@@ -285,6 +285,13 @@ function(input, output, session) {
       dplyr::select(
         crisis_driver, adm2_weighted, country_severity, driver_weight, weighted_contribution
       ) %>%
+      dplyr::rename(
+        `Crisis Driver` = crisis_driver,
+        `ADM2 Weighted` = adm2_weighted,
+        `Country Severity` = country_severity,
+        `Driver Weight` = driver_weight,
+        `Weighted Contribution` = weighted_contribution
+      ) %>%
       as.data.frame()
   }, striped = TRUE, spacing = "s")
 
@@ -295,6 +302,11 @@ function(input, output, session) {
       dplyr::mutate(
         national_pin = format(round(national_pin), big.mark = ","),
         pct_of_population = paste0(pct_of_population, "%")
+      ) %>%
+      dplyr::rename(
+        `Crisis Driver` = crisis_driver,
+        `National PiN` = national_pin,
+        `% of Population` = pct_of_population
       ) %>%
       as.data.frame()
   }, striped = TRUE)
