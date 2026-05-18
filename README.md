@@ -21,6 +21,22 @@ Shiny app for exploring **Proxy Severity Index (PSI)** scores and **People in Ne
 Rscript install_packages.R
 ```
 
+## Deploy to Posit Connect Cloud
+
+This is a **Shiny for R** app. Posit Connect Cloud needs [`manifest.json`](https://docs.posit.co/connect-cloud/how-to/r/dependencies.html), not `requirements.txt` ([`requirements.txt` is for Python only](https://docs.posit.co/connect-cloud/how-to/python/dependencies.html)).
+
+1. In Posit Connect Cloud, choose **Shiny for R** (not Python).
+2. Point deployment at this repo; primary file: `app.R`.
+3. Ensure `manifest.json` is in the repo root (regenerate locally after adding packages):
+
+   ```r
+   install.packages("rsconnect")
+   setwd("path/to/acaps_inform_proxy_pin")
+   rsconnect::writeManifest()
+   ```
+
+4. Commit and push `manifest.json`, then redeploy.
+
 ## Run locally
 
 Clone the repo, set working directory to the app root (this folder), then:
