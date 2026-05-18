@@ -1,0 +1,16 @@
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Renviron
+.Rprofile
+*.Rproj
+.Rproj.user/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
